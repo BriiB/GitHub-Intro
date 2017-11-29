@@ -6,12 +6,16 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class main extends Application{
-
+	
+	public static final double WORLD_WIDTH = 500;
+	public static final double WORLD_HEIGHT = 500;
+	
+	Group root = new Group();
+	Scene scene = new Scene(root, WORLD_WIDTH, WORLD_HEIGHT);
+	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		Group root = new Group();
-		Scene scene = new Scene(root, 500, 500);
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
