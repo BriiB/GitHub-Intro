@@ -3,6 +3,8 @@ package Circle;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 public class main extends Application{
@@ -16,7 +18,16 @@ public class main extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
+		Circle cir = new Circle(WORLD_WIDTH/50);
+		cir.setFill(Color.rgb(0, 255, 255));
+		cir.setTranslateX(WORLD_WIDTH/2);
+		cir.setTranslateY(WORLD_WIDTH/2);
+		
+		root.getChildren().addAll(cir);
+		
+		primaryStage.setTitle("Circle");
 		primaryStage.setScene(scene);
+		primaryStage.setResizable(false);
 		primaryStage.show();
 		
 	}
